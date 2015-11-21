@@ -1,0 +1,2026 @@
+.
+├── bookstore-0.0.1-SNAPSHOT
+│   ├── META-INF
+│   ├── WEB-INF
+│   │   ├── classes
+│   │   │   ├── banner.txt
+│   │   │   ├── com
+│   │   │   │   └── mycompany
+│   │   │   │       └── myapp
+│   │   │   │           ├── Application.class
+│   │   │   │           ├── ApplicationWebXml.class
+│   │   │   │           ├── aop
+│   │   │   │           │   └── logging
+│   │   │   │           │       └── LoggingAspect.class
+│   │   │   │           ├── async
+│   │   │   │           │   ├── ExceptionHandlingAsyncTaskExecutor$1.class
+│   │   │   │           │   ├── ExceptionHandlingAsyncTaskExecutor$2.class
+│   │   │   │           │   └── ExceptionHandlingAsyncTaskExecutor.class
+│   │   │   │           ├── config
+│   │   │   │           │   ├── AsyncConfiguration.class
+│   │   │   │           │   ├── CacheConfiguration.class
+│   │   │   │           │   ├── CloudDatabaseConfiguration.class
+│   │   │   │           │   ├── Constants.class
+│   │   │   │           │   ├── DatabaseConfiguration.class
+│   │   │   │           │   ├── JacksonConfiguration.class
+│   │   │   │           │   ├── LocaleConfiguration.class
+│   │   │   │           │   ├── LoggingAspectConfiguration.class
+│   │   │   │           │   ├── MailConfiguration.class
+│   │   │   │           │   ├── MetricsConfiguration$GraphiteRegistry.class
+│   │   │   │           │   ├── MetricsConfiguration.class
+│   │   │   │           │   ├── SecurityConfiguration.class
+│   │   │   │           │   ├── ThymeleafConfiguration.class
+│   │   │   │           │   ├── WebConfigurer.class
+│   │   │   │           │   ├── apidoc
+│   │   │   │           │   │   └── SwaggerConfiguration.class
+│   │   │   │           │   ├── audit
+│   │   │   │           │   │   └── AuditEventConverter.class
+│   │   │   │           │   ├── locale
+│   │   │   │           │   │   ├── AngularCookieLocaleResolver$1.class
+│   │   │   │           │   │   └── AngularCookieLocaleResolver.class
+│   │   │   │           │   └── metrics
+│   │   │   │           │       ├── DatabaseHealthIndicator$1.class
+│   │   │   │           │       ├── DatabaseHealthIndicator.class
+│   │   │   │           │       ├── JHipsterHealthIndicatorConfiguration.class
+│   │   │   │           │       └── JavaMailHealthIndicator.class
+│   │   │   │           ├── domain
+│   │   │   │           │   ├── AbstractAuditingEntity.class
+│   │   │   │           │   ├── Author.class
+│   │   │   │           │   ├── Authority.class
+│   │   │   │           │   ├── Book.class
+│   │   │   │           │   ├── PersistentAuditEvent.class
+│   │   │   │           │   ├── PersistentToken.class
+│   │   │   │           │   ├── User.class
+│   │   │   │           │   └── util
+│   │   │   │           │       ├── CustomDateTimeDeserializer.class
+│   │   │   │           │       ├── CustomDateTimeSerializer.class
+│   │   │   │           │       ├── CustomLocalDateSerializer.class
+│   │   │   │           │       └── ISO8601LocalDateDeserializer.class
+│   │   │   │           ├── repository
+│   │   │   │           │   ├── AuthorRepository.class
+│   │   │   │           │   ├── AuthorityRepository.class
+│   │   │   │           │   ├── BookRepository.class
+│   │   │   │           │   ├── CustomAuditEventRepository$1.class
+│   │   │   │           │   ├── CustomAuditEventRepository.class
+│   │   │   │           │   ├── PersistenceAuditEventRepository.class
+│   │   │   │           │   ├── PersistentTokenRepository.class
+│   │   │   │           │   └── UserRepository.class
+│   │   │   │           ├── security
+│   │   │   │           │   ├── AjaxAuthenticationFailureHandler.class
+│   │   │   │           │   ├── AjaxAuthenticationSuccessHandler.class
+│   │   │   │           │   ├── AjaxLogoutSuccessHandler.class
+│   │   │   │           │   ├── AuthoritiesConstants.class
+│   │   │   │           │   ├── CustomPersistentRememberMeServices.class
+│   │   │   │           │   ├── Http401UnauthorizedEntryPoint.class
+│   │   │   │           │   ├── SecurityUtils.class
+│   │   │   │           │   ├── SpringSecurityAuditorAware.class
+│   │   │   │           │   ├── UserDetailsService.class
+│   │   │   │           │   └── UserNotActivatedException.class
+│   │   │   │           ├── service
+│   │   │   │           │   ├── AuditEventService.class
+│   │   │   │           │   ├── MailService.class
+│   │   │   │           │   ├── UserService.class
+│   │   │   │           │   └── util
+│   │   │   │           │       └── RandomUtil.class
+│   │   │   │           └── web
+│   │   │   │               ├── filter
+│   │   │   │               │   ├── CachingHttpHeadersFilter.class
+│   │   │   │               │   ├── CsrfCookieGeneratorFilter.class
+│   │   │   │               │   ├── StaticResourcesProductionFilter.class
+│   │   │   │               │   └── gzip
+│   │   │   │               │       ├── GZipResponseUtil.class
+│   │   │   │               │       ├── GZipServletFilter.class
+│   │   │   │               │       ├── GZipServletOutputStream.class
+│   │   │   │               │       ├── GZipServletResponseWrapper.class
+│   │   │   │               │       └── GzipResponseHeadersNotModifiableException.class
+│   │   │   │               ├── propertyeditors
+│   │   │   │               │   └── LocaleDateTimeEditor.class
+│   │   │   │               └── rest
+│   │   │   │                   ├── AccountResource.class
+│   │   │   │                   ├── AuditResource.class
+│   │   │   │                   ├── AuthorResource.class
+│   │   │   │                   ├── BookResource.class
+│   │   │   │                   ├── LogsResource.class
+│   │   │   │                   ├── UserResource.class
+│   │   │   │                   ├── dto
+│   │   │   │                   │   ├── LoggerDTO.class
+│   │   │   │                   │   └── UserDTO.class
+│   │   │   │                   └── util
+│   │   │   │                       └── PaginationUtil.class
+│   │   │   ├── config
+│   │   │   │   ├── application-dev.yml
+│   │   │   │   ├── application-prod.yml
+│   │   │   │   ├── application.yml
+│   │   │   │   └── liquibase
+│   │   │   │       ├── authorities.csv
+│   │   │   │       ├── changelog
+│   │   │   │       │   ├── 00000000000000_initial_schema.xml
+│   │   │   │       │   ├── 20150503152511_added_entity_Author.xml
+│   │   │   │       │   └── 20150503152919_added_entity_Book.xml
+│   │   │   │       ├── master.xml
+│   │   │   │       ├── users.csv
+│   │   │   │       └── users_authorities.csv
+│   │   │   ├── i18n
+│   │   │   │   ├── messages_en.properties
+│   │   │   │   └── messages_fr.properties
+│   │   │   ├── logback.xml
+│   │   │   ├── mails
+│   │   │   │   └── activationEmail.html
+│   │   │   └── templates
+│   │   │       └── error.html
+│   │   └── lib
+│   │       ├── HikariCP-java6-2.2.5.jar
+│   │       ├── activation-1.1.jar
+│   │       ├── antlr-2.7.7.jar
+│   │       ├── aopalliance-1.0.jar
+│   │       ├── aspectjrt-1.8.5.jar
+│   │       ├── aspectjweaver-1.8.5.jar
+│   │       ├── classmate-1.1.0.jar
+│   │       ├── commons-io-2.4.jar
+│   │       ├── commons-lang-2.6.jar
+│   │       ├── commons-lang3-3.3.2.jar
+│   │       ├── dom4j-1.6.1.jar
+│   │       ├── guava-15.0.jar
+│   │       ├── hibernate-commons-annotations-4.0.5.Final.jar
+│   │       ├── hibernate-core-4.3.6.Final.jar
+│   │       ├── hibernate-entitymanager-4.3.6.Final.jar
+│   │       ├── hibernate-envers-4.3.6.Final.jar
+│   │       ├── hibernate-jpa-2.1-api-1.0.0.Final.jar
+│   │       ├── hibernate-validator-5.1.3.Final.jar
+│   │       ├── hppc-0.6.0.jar
+│   │       ├── jackson-annotations-2.4.5.jar
+│   │       ├── jackson-core-2.4.5.jar
+│   │       ├── jackson-databind-2.4.5.jar
+│   │       ├── jackson-datatype-hibernate4-2.4.5.jar
+│   │       ├── jackson-datatype-hppc-2.4.5.jar
+│   │       ├── jackson-datatype-joda-2.4.5.jar
+│   │       ├── jackson-datatype-json-org-2.4.5.jar
+│   │       ├── jandex-1.1.0.Final.jar
+│   │       ├── javassist-3.18.1-GA.jar
+│   │       ├── javax.inject-1.jar
+│   │       ├── javax.mail-1.5.2.jar
+│   │       ├── javax.transaction-api-1.2.jar
+│   │       ├── jboss-logging-3.1.3.GA.jar
+│   │       ├── jboss-logging-annotations-1.2.0.Beta1.jar
+│   │       ├── jboss-transaction-api_1.2_spec-1.0.0.Final.jar
+│   │       ├── jcl-over-slf4j-1.7.11.jar
+│   │       ├── joda-time-2.5.jar
+│   │       ├── joda-time-hibernate-1.3.jar
+│   │       ├── json-20090211_1.jar
+│   │       ├── jul-to-slf4j-1.7.11.jar
+│   │       ├── liquibase-core-3.3.2.jar
+│   │       ├── liquibase-slf4j-1.2.1.jar
+│   │       ├── log4j-over-slf4j-1.7.11.jar
+│   │       ├── logback-classic-1.1.3.jar
+│   │       ├── logback-core-1.1.3.jar
+│   │       ├── metrics-annotation-3.1.1.jar
+│   │       ├── metrics-core-3.1.1.jar
+│   │       ├── metrics-graphite-3.1.1.jar
+│   │       ├── metrics-healthchecks-3.1.1.jar
+│   │       ├── metrics-json-3.1.1.jar
+│   │       ├── metrics-jvm-3.1.1.jar
+│   │       ├── metrics-servlet-3.1.1.jar
+│   │       ├── metrics-servlets-3.1.1.jar
+│   │       ├── metrics-spring-3.0.4.jar
+│   │       ├── ognl-3.0.8.jar
+│   │       ├── postgresql-9.3-1102-jdbc41.jar
+│   │       ├── slf4j-api-1.7.11.jar
+│   │       ├── snakeyaml-1.14.jar
+│   │       ├── spring-aop-4.1.6.RELEASE.jar
+│   │       ├── spring-aspects-4.1.6.RELEASE.jar
+│   │       ├── spring-beans-4.1.6.RELEASE.jar
+│   │       ├── spring-boot-1.2.3.RELEASE.jar
+│   │       ├── spring-boot-actuator-1.2.3.RELEASE.jar
+│   │       ├── spring-boot-autoconfigure-1.2.3.RELEASE.jar
+│   │       ├── spring-boot-loader-tools-1.2.3.RELEASE.jar
+│   │       ├── spring-boot-starter-1.2.3.RELEASE.jar
+│   │       ├── spring-boot-starter-aop-1.2.3.RELEASE.jar
+│   │       ├── spring-boot-starter-data-jpa-1.2.3.RELEASE.jar
+│   │       ├── spring-boot-starter-jdbc-1.2.3.RELEASE.jar
+│   │       ├── spring-boot-starter-logging-1.2.3.RELEASE.jar
+│   │       ├── spring-boot-starter-mail-1.2.3.RELEASE.jar
+│   │       ├── spring-boot-starter-security-1.2.3.RELEASE.jar
+│   │       ├── spring-boot-starter-thymeleaf-1.2.3.RELEASE.jar
+│   │       ├── spring-boot-starter-tomcat-1.2.3.RELEASE.jar
+│   │       ├── spring-boot-starter-web-1.2.3.RELEASE.jar
+│   │       ├── spring-cloud-cloudfoundry-connector-1.1.1.RELEASE.jar
+│   │       ├── spring-cloud-core-1.1.1.RELEASE.jar
+│   │       ├── spring-cloud-localconfig-connector-1.1.1.RELEASE.jar
+│   │       ├── spring-cloud-spring-service-connector-1.1.1.RELEASE.jar
+│   │       ├── spring-context-4.1.6.RELEASE.jar
+│   │       ├── spring-context-support-4.1.6.RELEASE.jar
+│   │       ├── spring-core-4.1.6.RELEASE.jar
+│   │       ├── spring-data-commons-1.9.2.RELEASE.jar
+│   │       ├── spring-data-jpa-1.7.2.RELEASE.jar
+│   │       ├── spring-expression-4.1.6.RELEASE.jar
+│   │       ├── spring-jdbc-4.1.6.RELEASE.jar
+│   │       ├── spring-orm-4.1.6.RELEASE.jar
+│   │       ├── spring-security-config-4.0.0.RELEASE.jar
+│   │       ├── spring-security-core-4.0.0.RELEASE.jar
+│   │       ├── spring-security-data-4.0.0.RELEASE.jar
+│   │       ├── spring-security-web-4.0.0.RELEASE.jar
+│   │       ├── spring-tx-4.1.6.RELEASE.jar
+│   │       ├── spring-web-4.1.6.RELEASE.jar
+│   │       ├── spring-webmvc-4.1.6.RELEASE.jar
+│   │       ├── swagger-annotations-1.3.11.jar
+│   │       ├── swagger-models-0.9.5.jar
+│   │       ├── swagger-springmvc-0.9.5.jar
+│   │       ├── thymeleaf-2.1.4.RELEASE.jar
+│   │       ├── thymeleaf-layout-dialect-1.2.7.jar
+│   │       ├── thymeleaf-spring4-2.1.4.RELEASE.jar
+│   │       ├── tomcat-embed-core-8.0.20.jar
+│   │       ├── tomcat-embed-el-8.0.20.jar
+│   │       ├── tomcat-embed-logging-juli-8.0.20.jar
+│   │       ├── tomcat-embed-websocket-8.0.20.jar
+│   │       ├── tomcat-jdbc-8.0.20.jar
+│   │       ├── tomcat-juli-8.0.20.jar
+│   │       ├── unbescape-1.1.0.RELEASE.jar
+│   │       ├── usertype.core-3.2.0.GA.jar
+│   │       ├── usertype.spi-3.2.0.GA.jar
+│   │       ├── validation-api-1.1.0.Final.jar
+│   │       └── xml-apis-1.0.b2.jar
+│   ├── assets
+│   │   ├── images
+│   │   │   ├── development_ribbon.png
+│   │   │   ├── hipster.png
+│   │   │   └── hipster2x.png
+│   │   └── styles
+│   │       ├── documentation.css
+│   │       └── main.css
+│   ├── bower_components
+│   │   ├── angular
+│   │   │   ├── README.md
+│   │   │   ├── angular-csp.css
+│   │   │   ├── angular.js
+│   │   │   ├── angular.min.js
+│   │   │   ├── angular.min.js.gzip
+│   │   │   ├── angular.min.js.map
+│   │   │   ├── bower.json
+│   │   │   └── package.json
+│   │   ├── angular-cache-buster
+│   │   │   ├── README.md
+│   │   │   ├── angular-cache-buster.js
+│   │   │   ├── bower.json
+│   │   │   ├── karma.conf.js
+│   │   │   └── package.json
+│   │   ├── angular-cookies
+│   │   │   ├── README.md
+│   │   │   ├── angular-cookies.js
+│   │   │   ├── angular-cookies.min.js
+│   │   │   ├── angular-cookies.min.js.map
+│   │   │   ├── bower.json
+│   │   │   └── package.json
+│   │   ├── angular-dynamic-locale
+│   │   │   ├── CONTRIBUTING.md
+│   │   │   ├── Gruntfile.js
+│   │   │   ├── LICENSE
+│   │   │   ├── README.md
+│   │   │   ├── bower.json
+│   │   │   ├── karma.conf.js
+│   │   │   ├── karma.min.conf.js
+│   │   │   ├── package.json
+│   │   │   ├── src
+│   │   │   │   └── tmhDynamicLocale.js
+│   │   │   ├── test
+│   │   │   │   └── tmhDynamicLocaleSpec.js
+│   │   │   ├── tmhDynamicLocale.min.js
+│   │   │   └── tmhDynamicLocale.min.js.map
+│   │   ├── angular-i18n
+│   │   │   ├── README.md
+│   │   │   ├── angular-locale_aa-dj.js
+│   │   │   ├── angular-locale_aa-er.js
+│   │   │   ├── angular-locale_aa-et.js
+│   │   │   ├── angular-locale_aa.js
+│   │   │   ├── angular-locale_af-na.js
+│   │   │   ├── angular-locale_af-za.js
+│   │   │   ├── angular-locale_af.js
+│   │   │   ├── angular-locale_agq-cm.js
+│   │   │   ├── angular-locale_agq.js
+│   │   │   ├── angular-locale_ak-gh.js
+│   │   │   ├── angular-locale_ak.js
+│   │   │   ├── angular-locale_am-et.js
+│   │   │   ├── angular-locale_am.js
+│   │   │   ├── angular-locale_ar-001.js
+│   │   │   ├── angular-locale_ar-ae.js
+│   │   │   ├── angular-locale_ar-bh.js
+│   │   │   ├── angular-locale_ar-dj.js
+│   │   │   ├── angular-locale_ar-dz.js
+│   │   │   ├── angular-locale_ar-eg.js
+│   │   │   ├── angular-locale_ar-eh.js
+│   │   │   ├── angular-locale_ar-er.js
+│   │   │   ├── angular-locale_ar-il.js
+│   │   │   ├── angular-locale_ar-iq.js
+│   │   │   ├── angular-locale_ar-jo.js
+│   │   │   ├── angular-locale_ar-km.js
+│   │   │   ├── angular-locale_ar-kw.js
+│   │   │   ├── angular-locale_ar-lb.js
+│   │   │   ├── angular-locale_ar-ly.js
+│   │   │   ├── angular-locale_ar-ma.js
+│   │   │   ├── angular-locale_ar-mr.js
+│   │   │   ├── angular-locale_ar-om.js
+│   │   │   ├── angular-locale_ar-ps.js
+│   │   │   ├── angular-locale_ar-qa.js
+│   │   │   ├── angular-locale_ar-sa.js
+│   │   │   ├── angular-locale_ar-sd.js
+│   │   │   ├── angular-locale_ar-so.js
+│   │   │   ├── angular-locale_ar-ss.js
+│   │   │   ├── angular-locale_ar-sy.js
+│   │   │   ├── angular-locale_ar-td.js
+│   │   │   ├── angular-locale_ar-tn.js
+│   │   │   ├── angular-locale_ar-ye.js
+│   │   │   ├── angular-locale_ar.js
+│   │   │   ├── angular-locale_as-in.js
+│   │   │   ├── angular-locale_as.js
+│   │   │   ├── angular-locale_asa-tz.js
+│   │   │   ├── angular-locale_asa.js
+│   │   │   ├── angular-locale_ast-es.js
+│   │   │   ├── angular-locale_ast.js
+│   │   │   ├── angular-locale_az-cyrl-az.js
+│   │   │   ├── angular-locale_az-cyrl.js
+│   │   │   ├── angular-locale_az-latn-az.js
+│   │   │   ├── angular-locale_az-latn.js
+│   │   │   ├── angular-locale_az.js
+│   │   │   ├── angular-locale_bas-cm.js
+│   │   │   ├── angular-locale_bas.js
+│   │   │   ├── angular-locale_be-by.js
+│   │   │   ├── angular-locale_be.js
+│   │   │   ├── angular-locale_bem-zm.js
+│   │   │   ├── angular-locale_bem.js
+│   │   │   ├── angular-locale_bez-tz.js
+│   │   │   ├── angular-locale_bez.js
+│   │   │   ├── angular-locale_bg-bg.js
+│   │   │   ├── angular-locale_bg.js
+│   │   │   ├── angular-locale_bm-latn-ml.js
+│   │   │   ├── angular-locale_bm-latn.js
+│   │   │   ├── angular-locale_bm-ml.js
+│   │   │   ├── angular-locale_bm.js
+│   │   │   ├── angular-locale_bn-bd.js
+│   │   │   ├── angular-locale_bn-in.js
+│   │   │   ├── angular-locale_bn.js
+│   │   │   ├── angular-locale_bo-cn.js
+│   │   │   ├── angular-locale_bo-in.js
+│   │   │   ├── angular-locale_bo.js
+│   │   │   ├── angular-locale_br-fr.js
+│   │   │   ├── angular-locale_br.js
+│   │   │   ├── angular-locale_brx-in.js
+│   │   │   ├── angular-locale_brx.js
+│   │   │   ├── angular-locale_bs-cyrl-ba.js
+│   │   │   ├── angular-locale_bs-cyrl.js
+│   │   │   ├── angular-locale_bs-latn-ba.js
+│   │   │   ├── angular-locale_bs-latn.js
+│   │   │   ├── angular-locale_bs.js
+│   │   │   ├── angular-locale_byn-er.js
+│   │   │   ├── angular-locale_byn.js
+│   │   │   ├── angular-locale_ca-ad.js
+│   │   │   ├── angular-locale_ca-es-valencia.js
+│   │   │   ├── angular-locale_ca-es.js
+│   │   │   ├── angular-locale_ca-fr.js
+│   │   │   ├── angular-locale_ca-it.js
+│   │   │   ├── angular-locale_ca.js
+│   │   │   ├── angular-locale_cgg-ug.js
+│   │   │   ├── angular-locale_cgg.js
+│   │   │   ├── angular-locale_chr-us.js
+│   │   │   ├── angular-locale_chr.js
+│   │   │   ├── angular-locale_ckb-arab-iq.js
+│   │   │   ├── angular-locale_ckb-arab-ir.js
+│   │   │   ├── angular-locale_ckb-arab.js
+│   │   │   ├── angular-locale_ckb-iq.js
+│   │   │   ├── angular-locale_ckb-ir.js
+│   │   │   ├── angular-locale_ckb-latn-iq.js
+│   │   │   ├── angular-locale_ckb-latn.js
+│   │   │   ├── angular-locale_ckb.js
+│   │   │   ├── angular-locale_cs-cz.js
+│   │   │   ├── angular-locale_cs.js
+│   │   │   ├── angular-locale_cy-gb.js
+│   │   │   ├── angular-locale_cy.js
+│   │   │   ├── angular-locale_da-dk.js
+│   │   │   ├── angular-locale_da-gl.js
+│   │   │   ├── angular-locale_da.js
+│   │   │   ├── angular-locale_dav-ke.js
+│   │   │   ├── angular-locale_dav.js
+│   │   │   ├── angular-locale_de-at.js
+│   │   │   ├── angular-locale_de-be.js
+│   │   │   ├── angular-locale_de-ch.js
+│   │   │   ├── angular-locale_de-de.js
+│   │   │   ├── angular-locale_de-li.js
+│   │   │   ├── angular-locale_de-lu.js
+│   │   │   ├── angular-locale_de.js
+│   │   │   ├── angular-locale_dje-ne.js
+│   │   │   ├── angular-locale_dje.js
+│   │   │   ├── angular-locale_dsb-de.js
+│   │   │   ├── angular-locale_dsb.js
+│   │   │   ├── angular-locale_dua-cm.js
+│   │   │   ├── angular-locale_dua.js
+│   │   │   ├── angular-locale_dyo-sn.js
+│   │   │   ├── angular-locale_dyo.js
+│   │   │   ├── angular-locale_dz-bt.js
+│   │   │   ├── angular-locale_dz.js
+│   │   │   ├── angular-locale_ebu-ke.js
+│   │   │   ├── angular-locale_ebu.js
+│   │   │   ├── angular-locale_ee-gh.js
+│   │   │   ├── angular-locale_ee-tg.js
+│   │   │   ├── angular-locale_ee.js
+│   │   │   ├── angular-locale_el-cy.js
+│   │   │   ├── angular-locale_el-gr.js
+│   │   │   ├── angular-locale_el.js
+│   │   │   ├── angular-locale_en-001.js
+│   │   │   ├── angular-locale_en-150.js
+│   │   │   ├── angular-locale_en-ag.js
+│   │   │   ├── angular-locale_en-ai.js
+│   │   │   ├── angular-locale_en-as.js
+│   │   │   ├── angular-locale_en-au.js
+│   │   │   ├── angular-locale_en-bb.js
+│   │   │   ├── angular-locale_en-be.js
+│   │   │   ├── angular-locale_en-bm.js
+│   │   │   ├── angular-locale_en-bs.js
+│   │   │   ├── angular-locale_en-bw.js
+│   │   │   ├── angular-locale_en-bz.js
+│   │   │   ├── angular-locale_en-ca.js
+│   │   │   ├── angular-locale_en-cc.js
+│   │   │   ├── angular-locale_en-ck.js
+│   │   │   ├── angular-locale_en-cm.js
+│   │   │   ├── angular-locale_en-cx.js
+│   │   │   ├── angular-locale_en-dg.js
+│   │   │   ├── angular-locale_en-dm.js
+│   │   │   ├── angular-locale_en-dsrt-us.js
+│   │   │   ├── angular-locale_en-dsrt.js
+│   │   │   ├── angular-locale_en-er.js
+│   │   │   ├── angular-locale_en-fj.js
+│   │   │   ├── angular-locale_en-fk.js
+│   │   │   ├── angular-locale_en-fm.js
+│   │   │   ├── angular-locale_en-gb.js
+│   │   │   ├── angular-locale_en-gd.js
+│   │   │   ├── angular-locale_en-gg.js
+│   │   │   ├── angular-locale_en-gh.js
+│   │   │   ├── angular-locale_en-gi.js
+│   │   │   ├── angular-locale_en-gm.js
+│   │   │   ├── angular-locale_en-gu.js
+│   │   │   ├── angular-locale_en-gy.js
+│   │   │   ├── angular-locale_en-hk.js
+│   │   │   ├── angular-locale_en-ie.js
+│   │   │   ├── angular-locale_en-im.js
+│   │   │   ├── angular-locale_en-in.js
+│   │   │   ├── angular-locale_en-io.js
+│   │   │   ├── angular-locale_en-iso.js
+│   │   │   ├── angular-locale_en-je.js
+│   │   │   ├── angular-locale_en-jm.js
+│   │   │   ├── angular-locale_en-ke.js
+│   │   │   ├── angular-locale_en-ki.js
+│   │   │   ├── angular-locale_en-kn.js
+│   │   │   ├── angular-locale_en-ky.js
+│   │   │   ├── angular-locale_en-lc.js
+│   │   │   ├── angular-locale_en-lr.js
+│   │   │   ├── angular-locale_en-ls.js
+│   │   │   ├── angular-locale_en-mg.js
+│   │   │   ├── angular-locale_en-mh.js
+│   │   │   ├── angular-locale_en-mo.js
+│   │   │   ├── angular-locale_en-mp.js
+│   │   │   ├── angular-locale_en-ms.js
+│   │   │   ├── angular-locale_en-mt.js
+│   │   │   ├── angular-locale_en-mu.js
+│   │   │   ├── angular-locale_en-mw.js
+│   │   │   ├── angular-locale_en-my.js
+│   │   │   ├── angular-locale_en-na.js
+│   │   │   ├── angular-locale_en-nf.js
+│   │   │   ├── angular-locale_en-ng.js
+│   │   │   ├── angular-locale_en-nr.js
+│   │   │   ├── angular-locale_en-nu.js
+│   │   │   ├── angular-locale_en-nz.js
+│   │   │   ├── angular-locale_en-pg.js
+│   │   │   ├── angular-locale_en-ph.js
+│   │   │   ├── angular-locale_en-pk.js
+│   │   │   ├── angular-locale_en-pn.js
+│   │   │   ├── angular-locale_en-pr.js
+│   │   │   ├── angular-locale_en-pw.js
+│   │   │   ├── angular-locale_en-rw.js
+│   │   │   ├── angular-locale_en-sb.js
+│   │   │   ├── angular-locale_en-sc.js
+│   │   │   ├── angular-locale_en-sd.js
+│   │   │   ├── angular-locale_en-sg.js
+│   │   │   ├── angular-locale_en-sh.js
+│   │   │   ├── angular-locale_en-sl.js
+│   │   │   ├── angular-locale_en-ss.js
+│   │   │   ├── angular-locale_en-sx.js
+│   │   │   ├── angular-locale_en-sz.js
+│   │   │   ├── angular-locale_en-tc.js
+│   │   │   ├── angular-locale_en-tk.js
+│   │   │   ├── angular-locale_en-to.js
+│   │   │   ├── angular-locale_en-tt.js
+│   │   │   ├── angular-locale_en-tv.js
+│   │   │   ├── angular-locale_en-tz.js
+│   │   │   ├── angular-locale_en-ug.js
+│   │   │   ├── angular-locale_en-um.js
+│   │   │   ├── angular-locale_en-us.js
+│   │   │   ├── angular-locale_en-vc.js
+│   │   │   ├── angular-locale_en-vg.js
+│   │   │   ├── angular-locale_en-vi.js
+│   │   │   ├── angular-locale_en-vu.js
+│   │   │   ├── angular-locale_en-ws.js
+│   │   │   ├── angular-locale_en-za.js
+│   │   │   ├── angular-locale_en-zm.js
+│   │   │   ├── angular-locale_en-zw.js
+│   │   │   ├── angular-locale_en.js
+│   │   │   ├── angular-locale_eo-001.js
+│   │   │   ├── angular-locale_eo.js
+│   │   │   ├── angular-locale_es-419.js
+│   │   │   ├── angular-locale_es-ar.js
+│   │   │   ├── angular-locale_es-bo.js
+│   │   │   ├── angular-locale_es-cl.js
+│   │   │   ├── angular-locale_es-co.js
+│   │   │   ├── angular-locale_es-cr.js
+│   │   │   ├── angular-locale_es-cu.js
+│   │   │   ├── angular-locale_es-do.js
+│   │   │   ├── angular-locale_es-ea.js
+│   │   │   ├── angular-locale_es-ec.js
+│   │   │   ├── angular-locale_es-es.js
+│   │   │   ├── angular-locale_es-gq.js
+│   │   │   ├── angular-locale_es-gt.js
+│   │   │   ├── angular-locale_es-hn.js
+│   │   │   ├── angular-locale_es-ic.js
+│   │   │   ├── angular-locale_es-mx.js
+│   │   │   ├── angular-locale_es-ni.js
+│   │   │   ├── angular-locale_es-pa.js
+│   │   │   ├── angular-locale_es-pe.js
+│   │   │   ├── angular-locale_es-ph.js
+│   │   │   ├── angular-locale_es-pr.js
+│   │   │   ├── angular-locale_es-py.js
+│   │   │   ├── angular-locale_es-sv.js
+│   │   │   ├── angular-locale_es-us.js
+│   │   │   ├── angular-locale_es-uy.js
+│   │   │   ├── angular-locale_es-ve.js
+│   │   │   ├── angular-locale_es.js
+│   │   │   ├── angular-locale_et-ee.js
+│   │   │   ├── angular-locale_et.js
+│   │   │   ├── angular-locale_eu-es.js
+│   │   │   ├── angular-locale_eu.js
+│   │   │   ├── angular-locale_ewo-cm.js
+│   │   │   ├── angular-locale_ewo.js
+│   │   │   ├── angular-locale_fa-af.js
+│   │   │   ├── angular-locale_fa-ir.js
+│   │   │   ├── angular-locale_fa.js
+│   │   │   ├── angular-locale_ff-cm.js
+│   │   │   ├── angular-locale_ff-gn.js
+│   │   │   ├── angular-locale_ff-mr.js
+│   │   │   ├── angular-locale_ff-sn.js
+│   │   │   ├── angular-locale_ff.js
+│   │   │   ├── angular-locale_fi-fi.js
+│   │   │   ├── angular-locale_fi.js
+│   │   │   ├── angular-locale_fil-ph.js
+│   │   │   ├── angular-locale_fil.js
+│   │   │   ├── angular-locale_fo-fo.js
+│   │   │   ├── angular-locale_fo.js
+│   │   │   ├── angular-locale_fr-be.js
+│   │   │   ├── angular-locale_fr-bf.js
+│   │   │   ├── angular-locale_fr-bi.js
+│   │   │   ├── angular-locale_fr-bj.js
+│   │   │   ├── angular-locale_fr-bl.js
+│   │   │   ├── angular-locale_fr-ca.js
+│   │   │   ├── angular-locale_fr-cd.js
+│   │   │   ├── angular-locale_fr-cf.js
+│   │   │   ├── angular-locale_fr-cg.js
+│   │   │   ├── angular-locale_fr-ch.js
+│   │   │   ├── angular-locale_fr-ci.js
+│   │   │   ├── angular-locale_fr-cm.js
+│   │   │   ├── angular-locale_fr-dj.js
+│   │   │   ├── angular-locale_fr-dz.js
+│   │   │   ├── angular-locale_fr-fr.js
+│   │   │   ├── angular-locale_fr-ga.js
+│   │   │   ├── angular-locale_fr-gf.js
+│   │   │   ├── angular-locale_fr-gn.js
+│   │   │   ├── angular-locale_fr-gp.js
+│   │   │   ├── angular-locale_fr-gq.js
+│   │   │   ├── angular-locale_fr-ht.js
+│   │   │   ├── angular-locale_fr-km.js
+│   │   │   ├── angular-locale_fr-lu.js
+│   │   │   ├── angular-locale_fr-ma.js
+│   │   │   ├── angular-locale_fr-mc.js
+│   │   │   ├── angular-locale_fr-mf.js
+│   │   │   ├── angular-locale_fr-mg.js
+│   │   │   ├── angular-locale_fr-ml.js
+│   │   │   ├── angular-locale_fr-mq.js
+│   │   │   ├── angular-locale_fr-mr.js
+│   │   │   ├── angular-locale_fr-mu.js
+│   │   │   ├── angular-locale_fr-nc.js
+│   │   │   ├── angular-locale_fr-ne.js
+│   │   │   ├── angular-locale_fr-pf.js
+│   │   │   ├── angular-locale_fr-pm.js
+│   │   │   ├── angular-locale_fr-re.js
+│   │   │   ├── angular-locale_fr-rw.js
+│   │   │   ├── angular-locale_fr-sc.js
+│   │   │   ├── angular-locale_fr-sn.js
+│   │   │   ├── angular-locale_fr-sy.js
+│   │   │   ├── angular-locale_fr-td.js
+│   │   │   ├── angular-locale_fr-tg.js
+│   │   │   ├── angular-locale_fr-tn.js
+│   │   │   ├── angular-locale_fr-vu.js
+│   │   │   ├── angular-locale_fr-wf.js
+│   │   │   ├── angular-locale_fr-yt.js
+│   │   │   ├── angular-locale_fr.js
+│   │   │   ├── angular-locale_fur-it.js
+│   │   │   ├── angular-locale_fur.js
+│   │   │   ├── angular-locale_fy-nl.js
+│   │   │   ├── angular-locale_fy.js
+│   │   │   ├── angular-locale_ga-ie.js
+│   │   │   ├── angular-locale_ga.js
+│   │   │   ├── angular-locale_gd-gb.js
+│   │   │   ├── angular-locale_gd.js
+│   │   │   ├── angular-locale_gl-es.js
+│   │   │   ├── angular-locale_gl.js
+│   │   │   ├── angular-locale_gsw-ch.js
+│   │   │   ├── angular-locale_gsw-fr.js
+│   │   │   ├── angular-locale_gsw-li.js
+│   │   │   ├── angular-locale_gsw.js
+│   │   │   ├── angular-locale_gu-in.js
+│   │   │   ├── angular-locale_gu.js
+│   │   │   ├── angular-locale_guz-ke.js
+│   │   │   ├── angular-locale_guz.js
+│   │   │   ├── angular-locale_gv-im.js
+│   │   │   ├── angular-locale_gv.js
+│   │   │   ├── angular-locale_ha-latn-gh.js
+│   │   │   ├── angular-locale_ha-latn-ne.js
+│   │   │   ├── angular-locale_ha-latn-ng.js
+│   │   │   ├── angular-locale_ha-latn.js
+│   │   │   ├── angular-locale_ha.js
+│   │   │   ├── angular-locale_haw-us.js
+│   │   │   ├── angular-locale_haw.js
+│   │   │   ├── angular-locale_he-il.js
+│   │   │   ├── angular-locale_he.js
+│   │   │   ├── angular-locale_hi-in.js
+│   │   │   ├── angular-locale_hi.js
+│   │   │   ├── angular-locale_hr-ba.js
+│   │   │   ├── angular-locale_hr-hr.js
+│   │   │   ├── angular-locale_hr.js
+│   │   │   ├── angular-locale_hsb-de.js
+│   │   │   ├── angular-locale_hsb.js
+│   │   │   ├── angular-locale_hu-hu.js
+│   │   │   ├── angular-locale_hu.js
+│   │   │   ├── angular-locale_hy-am.js
+│   │   │   ├── angular-locale_hy.js
+│   │   │   ├── angular-locale_ia-fr.js
+│   │   │   ├── angular-locale_ia.js
+│   │   │   ├── angular-locale_id-id.js
+│   │   │   ├── angular-locale_id.js
+│   │   │   ├── angular-locale_ig-ng.js
+│   │   │   ├── angular-locale_ig.js
+│   │   │   ├── angular-locale_ii-cn.js
+│   │   │   ├── angular-locale_ii.js
+│   │   │   ├── angular-locale_in.js
+│   │   │   ├── angular-locale_is-is.js
+│   │   │   ├── angular-locale_is.js
+│   │   │   ├── angular-locale_it-ch.js
+│   │   │   ├── angular-locale_it-it.js
+│   │   │   ├── angular-locale_it-sm.js
+│   │   │   ├── angular-locale_it.js
+│   │   │   ├── angular-locale_iw.js
+│   │   │   ├── angular-locale_ja-jp.js
+│   │   │   ├── angular-locale_ja.js
+│   │   │   ├── angular-locale_jgo-cm.js
+│   │   │   ├── angular-locale_jgo.js
+│   │   │   ├── angular-locale_jmc-tz.js
+│   │   │   ├── angular-locale_jmc.js
+│   │   │   ├── angular-locale_ka-ge.js
+│   │   │   ├── angular-locale_ka.js
+│   │   │   ├── angular-locale_kab-dz.js
+│   │   │   ├── angular-locale_kab.js
+│   │   │   ├── angular-locale_kam-ke.js
+│   │   │   ├── angular-locale_kam.js
+│   │   │   ├── angular-locale_kde-tz.js
+│   │   │   ├── angular-locale_kde.js
+│   │   │   ├── angular-locale_kea-cv.js
+│   │   │   ├── angular-locale_kea.js
+│   │   │   ├── angular-locale_khq-ml.js
+│   │   │   ├── angular-locale_khq.js
+│   │   │   ├── angular-locale_ki-ke.js
+│   │   │   ├── angular-locale_ki.js
+│   │   │   ├── angular-locale_kk-cyrl-kz.js
+│   │   │   ├── angular-locale_kk-cyrl.js
+│   │   │   ├── angular-locale_kk.js
+│   │   │   ├── angular-locale_kkj-cm.js
+│   │   │   ├── angular-locale_kkj.js
+│   │   │   ├── angular-locale_kl-gl.js
+│   │   │   ├── angular-locale_kl.js
+│   │   │   ├── angular-locale_kln-ke.js
+│   │   │   ├── angular-locale_kln.js
+│   │   │   ├── angular-locale_km-kh.js
+│   │   │   ├── angular-locale_km.js
+│   │   │   ├── angular-locale_kn-in.js
+│   │   │   ├── angular-locale_kn.js
+│   │   │   ├── angular-locale_ko-kp.js
+│   │   │   ├── angular-locale_ko-kr.js
+│   │   │   ├── angular-locale_ko.js
+│   │   │   ├── angular-locale_kok-in.js
+│   │   │   ├── angular-locale_kok.js
+│   │   │   ├── angular-locale_ks-arab-in.js
+│   │   │   ├── angular-locale_ks-arab.js
+│   │   │   ├── angular-locale_ks.js
+│   │   │   ├── angular-locale_ksb-tz.js
+│   │   │   ├── angular-locale_ksb.js
+│   │   │   ├── angular-locale_ksf-cm.js
+│   │   │   ├── angular-locale_ksf.js
+│   │   │   ├── angular-locale_ksh-de.js
+│   │   │   ├── angular-locale_ksh.js
+│   │   │   ├── angular-locale_kw-gb.js
+│   │   │   ├── angular-locale_kw.js
+│   │   │   ├── angular-locale_ky-cyrl-kg.js
+│   │   │   ├── angular-locale_ky-cyrl.js
+│   │   │   ├── angular-locale_ky.js
+│   │   │   ├── angular-locale_lag-tz.js
+│   │   │   ├── angular-locale_lag.js
+│   │   │   ├── angular-locale_lb-lu.js
+│   │   │   ├── angular-locale_lb.js
+│   │   │   ├── angular-locale_lg-ug.js
+│   │   │   ├── angular-locale_lg.js
+│   │   │   ├── angular-locale_lkt-us.js
+│   │   │   ├── angular-locale_lkt.js
+│   │   │   ├── angular-locale_ln-ao.js
+│   │   │   ├── angular-locale_ln-cd.js
+│   │   │   ├── angular-locale_ln-cf.js
+│   │   │   ├── angular-locale_ln-cg.js
+│   │   │   ├── angular-locale_ln.js
+│   │   │   ├── angular-locale_lo-la.js
+│   │   │   ├── angular-locale_lo.js
+│   │   │   ├── angular-locale_lt-lt.js
+│   │   │   ├── angular-locale_lt.js
+│   │   │   ├── angular-locale_lu-cd.js
+│   │   │   ├── angular-locale_lu.js
+│   │   │   ├── angular-locale_luo-ke.js
+│   │   │   ├── angular-locale_luo.js
+│   │   │   ├── angular-locale_luy-ke.js
+│   │   │   ├── angular-locale_luy.js
+│   │   │   ├── angular-locale_lv-lv.js
+│   │   │   ├── angular-locale_lv.js
+│   │   │   ├── angular-locale_mas-ke.js
+│   │   │   ├── angular-locale_mas-tz.js
+│   │   │   ├── angular-locale_mas.js
+│   │   │   ├── angular-locale_mer-ke.js
+│   │   │   ├── angular-locale_mer.js
+│   │   │   ├── angular-locale_mfe-mu.js
+│   │   │   ├── angular-locale_mfe.js
+│   │   │   ├── angular-locale_mg-mg.js
+│   │   │   ├── angular-locale_mg.js
+│   │   │   ├── angular-locale_mgh-mz.js
+│   │   │   ├── angular-locale_mgh.js
+│   │   │   ├── angular-locale_mgo-cm.js
+│   │   │   ├── angular-locale_mgo.js
+│   │   │   ├── angular-locale_mk-mk.js
+│   │   │   ├── angular-locale_mk.js
+│   │   │   ├── angular-locale_ml-in.js
+│   │   │   ├── angular-locale_ml.js
+│   │   │   ├── angular-locale_mn-cyrl-mn.js
+│   │   │   ├── angular-locale_mn-cyrl.js
+│   │   │   ├── angular-locale_mn.js
+│   │   │   ├── angular-locale_mr-in.js
+│   │   │   ├── angular-locale_mr.js
+│   │   │   ├── angular-locale_ms-bn.js
+│   │   │   ├── angular-locale_ms-latn-bn.js
+│   │   │   ├── angular-locale_ms-latn-my.js
+│   │   │   ├── angular-locale_ms-latn-sg.js
+│   │   │   ├── angular-locale_ms-latn.js
+│   │   │   ├── angular-locale_ms-my.js
+│   │   │   ├── angular-locale_ms.js
+│   │   │   ├── angular-locale_mt-mt.js
+│   │   │   ├── angular-locale_mt.js
+│   │   │   ├── angular-locale_mua-cm.js
+│   │   │   ├── angular-locale_mua.js
+│   │   │   ├── angular-locale_my-mm.js
+│   │   │   ├── angular-locale_my.js
+│   │   │   ├── angular-locale_naq-na.js
+│   │   │   ├── angular-locale_naq.js
+│   │   │   ├── angular-locale_nb-no.js
+│   │   │   ├── angular-locale_nb-sj.js
+│   │   │   ├── angular-locale_nb.js
+│   │   │   ├── angular-locale_nd-zw.js
+│   │   │   ├── angular-locale_nd.js
+│   │   │   ├── angular-locale_ne-in.js
+│   │   │   ├── angular-locale_ne-np.js
+│   │   │   ├── angular-locale_ne.js
+│   │   │   ├── angular-locale_nl-aw.js
+│   │   │   ├── angular-locale_nl-be.js
+│   │   │   ├── angular-locale_nl-bq.js
+│   │   │   ├── angular-locale_nl-cw.js
+│   │   │   ├── angular-locale_nl-nl.js
+│   │   │   ├── angular-locale_nl-sr.js
+│   │   │   ├── angular-locale_nl-sx.js
+│   │   │   ├── angular-locale_nl.js
+│   │   │   ├── angular-locale_nmg-cm.js
+│   │   │   ├── angular-locale_nmg.js
+│   │   │   ├── angular-locale_nn-no.js
+│   │   │   ├── angular-locale_nn.js
+│   │   │   ├── angular-locale_nnh-cm.js
+│   │   │   ├── angular-locale_nnh.js
+│   │   │   ├── angular-locale_no-no.js
+│   │   │   ├── angular-locale_no.js
+│   │   │   ├── angular-locale_nr-za.js
+│   │   │   ├── angular-locale_nr.js
+│   │   │   ├── angular-locale_nso-za.js
+│   │   │   ├── angular-locale_nso.js
+│   │   │   ├── angular-locale_nus-sd.js
+│   │   │   ├── angular-locale_nus.js
+│   │   │   ├── angular-locale_nyn-ug.js
+│   │   │   ├── angular-locale_nyn.js
+│   │   │   ├── angular-locale_om-et.js
+│   │   │   ├── angular-locale_om-ke.js
+│   │   │   ├── angular-locale_om.js
+│   │   │   ├── angular-locale_or-in.js
+│   │   │   ├── angular-locale_or.js
+│   │   │   ├── angular-locale_os-ge.js
+│   │   │   ├── angular-locale_os-ru.js
+│   │   │   ├── angular-locale_os.js
+│   │   │   ├── angular-locale_pa-arab-pk.js
+│   │   │   ├── angular-locale_pa-arab.js
+│   │   │   ├── angular-locale_pa-guru-in.js
+│   │   │   ├── angular-locale_pa-guru.js
+│   │   │   ├── angular-locale_pa.js
+│   │   │   ├── angular-locale_pl-pl.js
+│   │   │   ├── angular-locale_pl.js
+│   │   │   ├── angular-locale_ps-af.js
+│   │   │   ├── angular-locale_ps.js
+│   │   │   ├── angular-locale_pt-ao.js
+│   │   │   ├── angular-locale_pt-br.js
+│   │   │   ├── angular-locale_pt-cv.js
+│   │   │   ├── angular-locale_pt-gw.js
+│   │   │   ├── angular-locale_pt-mo.js
+│   │   │   ├── angular-locale_pt-mz.js
+│   │   │   ├── angular-locale_pt-pt.js
+│   │   │   ├── angular-locale_pt-st.js
+│   │   │   ├── angular-locale_pt-tl.js
+│   │   │   ├── angular-locale_pt.js
+│   │   │   ├── angular-locale_qu-bo.js
+│   │   │   ├── angular-locale_qu-ec.js
+│   │   │   ├── angular-locale_qu-pe.js
+│   │   │   ├── angular-locale_qu.js
+│   │   │   ├── angular-locale_rm-ch.js
+│   │   │   ├── angular-locale_rm.js
+│   │   │   ├── angular-locale_rn-bi.js
+│   │   │   ├── angular-locale_rn.js
+│   │   │   ├── angular-locale_ro-md.js
+│   │   │   ├── angular-locale_ro-ro.js
+│   │   │   ├── angular-locale_ro.js
+│   │   │   ├── angular-locale_rof-tz.js
+│   │   │   ├── angular-locale_rof.js
+│   │   │   ├── angular-locale_ru-by.js
+│   │   │   ├── angular-locale_ru-kg.js
+│   │   │   ├── angular-locale_ru-kz.js
+│   │   │   ├── angular-locale_ru-md.js
+│   │   │   ├── angular-locale_ru-ru.js
+│   │   │   ├── angular-locale_ru-ua.js
+│   │   │   ├── angular-locale_ru.js
+│   │   │   ├── angular-locale_rw-rw.js
+│   │   │   ├── angular-locale_rw.js
+│   │   │   ├── angular-locale_rwk-tz.js
+│   │   │   ├── angular-locale_rwk.js
+│   │   │   ├── angular-locale_sah-ru.js
+│   │   │   ├── angular-locale_sah.js
+│   │   │   ├── angular-locale_saq-ke.js
+│   │   │   ├── angular-locale_saq.js
+│   │   │   ├── angular-locale_sbp-tz.js
+│   │   │   ├── angular-locale_sbp.js
+│   │   │   ├── angular-locale_se-fi.js
+│   │   │   ├── angular-locale_se-no.js
+│   │   │   ├── angular-locale_se-se.js
+│   │   │   ├── angular-locale_se.js
+│   │   │   ├── angular-locale_seh-mz.js
+│   │   │   ├── angular-locale_seh.js
+│   │   │   ├── angular-locale_ses-ml.js
+│   │   │   ├── angular-locale_ses.js
+│   │   │   ├── angular-locale_sg-cf.js
+│   │   │   ├── angular-locale_sg.js
+│   │   │   ├── angular-locale_shi-latn-ma.js
+│   │   │   ├── angular-locale_shi-latn.js
+│   │   │   ├── angular-locale_shi-tfng-ma.js
+│   │   │   ├── angular-locale_shi-tfng.js
+│   │   │   ├── angular-locale_shi.js
+│   │   │   ├── angular-locale_si-lk.js
+│   │   │   ├── angular-locale_si.js
+│   │   │   ├── angular-locale_sk-sk.js
+│   │   │   ├── angular-locale_sk.js
+│   │   │   ├── angular-locale_sl-si.js
+│   │   │   ├── angular-locale_sl.js
+│   │   │   ├── angular-locale_smn-fi.js
+│   │   │   ├── angular-locale_smn.js
+│   │   │   ├── angular-locale_sn-zw.js
+│   │   │   ├── angular-locale_sn.js
+│   │   │   ├── angular-locale_so-dj.js
+│   │   │   ├── angular-locale_so-et.js
+│   │   │   ├── angular-locale_so-ke.js
+│   │   │   ├── angular-locale_so-so.js
+│   │   │   ├── angular-locale_so.js
+│   │   │   ├── angular-locale_sq-al.js
+│   │   │   ├── angular-locale_sq-mk.js
+│   │   │   ├── angular-locale_sq-xk.js
+│   │   │   ├── angular-locale_sq.js
+│   │   │   ├── angular-locale_sr-cyrl-ba.js
+│   │   │   ├── angular-locale_sr-cyrl-me.js
+│   │   │   ├── angular-locale_sr-cyrl-rs.js
+│   │   │   ├── angular-locale_sr-cyrl-xk.js
+│   │   │   ├── angular-locale_sr-cyrl.js
+│   │   │   ├── angular-locale_sr-latn-ba.js
+│   │   │   ├── angular-locale_sr-latn-me.js
+│   │   │   ├── angular-locale_sr-latn-rs.js
+│   │   │   ├── angular-locale_sr-latn-xk.js
+│   │   │   ├── angular-locale_sr-latn.js
+│   │   │   ├── angular-locale_sr.js
+│   │   │   ├── angular-locale_ss-sz.js
+│   │   │   ├── angular-locale_ss-za.js
+│   │   │   ├── angular-locale_ss.js
+│   │   │   ├── angular-locale_ssy-er.js
+│   │   │   ├── angular-locale_ssy.js
+│   │   │   ├── angular-locale_st-ls.js
+│   │   │   ├── angular-locale_st-za.js
+│   │   │   ├── angular-locale_st.js
+│   │   │   ├── angular-locale_sv-ax.js
+│   │   │   ├── angular-locale_sv-fi.js
+│   │   │   ├── angular-locale_sv-se.js
+│   │   │   ├── angular-locale_sv.js
+│   │   │   ├── angular-locale_sw-ke.js
+│   │   │   ├── angular-locale_sw-tz.js
+│   │   │   ├── angular-locale_sw-ug.js
+│   │   │   ├── angular-locale_sw.js
+│   │   │   ├── angular-locale_swc-cd.js
+│   │   │   ├── angular-locale_swc.js
+│   │   │   ├── angular-locale_ta-in.js
+│   │   │   ├── angular-locale_ta-lk.js
+│   │   │   ├── angular-locale_ta-my.js
+│   │   │   ├── angular-locale_ta-sg.js
+│   │   │   ├── angular-locale_ta.js
+│   │   │   ├── angular-locale_te-in.js
+│   │   │   ├── angular-locale_te.js
+│   │   │   ├── angular-locale_teo-ke.js
+│   │   │   ├── angular-locale_teo-ug.js
+│   │   │   ├── angular-locale_teo.js
+│   │   │   ├── angular-locale_tg-cyrl-tj.js
+│   │   │   ├── angular-locale_tg-cyrl.js
+│   │   │   ├── angular-locale_tg.js
+│   │   │   ├── angular-locale_th-th.js
+│   │   │   ├── angular-locale_th.js
+│   │   │   ├── angular-locale_ti-er.js
+│   │   │   ├── angular-locale_ti-et.js
+│   │   │   ├── angular-locale_ti.js
+│   │   │   ├── angular-locale_tig-er.js
+│   │   │   ├── angular-locale_tig.js
+│   │   │   ├── angular-locale_tl.js
+│   │   │   ├── angular-locale_tn-bw.js
+│   │   │   ├── angular-locale_tn-za.js
+│   │   │   ├── angular-locale_tn.js
+│   │   │   ├── angular-locale_to-to.js
+│   │   │   ├── angular-locale_to.js
+│   │   │   ├── angular-locale_tr-cy.js
+│   │   │   ├── angular-locale_tr-tr.js
+│   │   │   ├── angular-locale_tr.js
+│   │   │   ├── angular-locale_ts-za.js
+│   │   │   ├── angular-locale_ts.js
+│   │   │   ├── angular-locale_twq-ne.js
+│   │   │   ├── angular-locale_twq.js
+│   │   │   ├── angular-locale_tzm-latn-ma.js
+│   │   │   ├── angular-locale_tzm-latn.js
+│   │   │   ├── angular-locale_tzm.js
+│   │   │   ├── angular-locale_ug-arab-cn.js
+│   │   │   ├── angular-locale_ug-arab.js
+│   │   │   ├── angular-locale_ug.js
+│   │   │   ├── angular-locale_uk-ua.js
+│   │   │   ├── angular-locale_uk.js
+│   │   │   ├── angular-locale_ur-in.js
+│   │   │   ├── angular-locale_ur-pk.js
+│   │   │   ├── angular-locale_ur.js
+│   │   │   ├── angular-locale_uz-arab-af.js
+│   │   │   ├── angular-locale_uz-arab.js
+│   │   │   ├── angular-locale_uz-cyrl-uz.js
+│   │   │   ├── angular-locale_uz-cyrl.js
+│   │   │   ├── angular-locale_uz-latn-uz.js
+│   │   │   ├── angular-locale_uz-latn.js
+│   │   │   ├── angular-locale_uz.js
+│   │   │   ├── angular-locale_vai-latn-lr.js
+│   │   │   ├── angular-locale_vai-latn.js
+│   │   │   ├── angular-locale_vai-vaii-lr.js
+│   │   │   ├── angular-locale_vai-vaii.js
+│   │   │   ├── angular-locale_vai.js
+│   │   │   ├── angular-locale_ve-za.js
+│   │   │   ├── angular-locale_ve.js
+│   │   │   ├── angular-locale_vi-vn.js
+│   │   │   ├── angular-locale_vi.js
+│   │   │   ├── angular-locale_vo-001.js
+│   │   │   ├── angular-locale_vo.js
+│   │   │   ├── angular-locale_vun-tz.js
+│   │   │   ├── angular-locale_vun.js
+│   │   │   ├── angular-locale_wae-ch.js
+│   │   │   ├── angular-locale_wae.js
+│   │   │   ├── angular-locale_wal-et.js
+│   │   │   ├── angular-locale_wal.js
+│   │   │   ├── angular-locale_xh-za.js
+│   │   │   ├── angular-locale_xh.js
+│   │   │   ├── angular-locale_xog-ug.js
+│   │   │   ├── angular-locale_xog.js
+│   │   │   ├── angular-locale_yav-cm.js
+│   │   │   ├── angular-locale_yav.js
+│   │   │   ├── angular-locale_yi-001.js
+│   │   │   ├── angular-locale_yi.js
+│   │   │   ├── angular-locale_yo-bj.js
+│   │   │   ├── angular-locale_yo-ng.js
+│   │   │   ├── angular-locale_yo.js
+│   │   │   ├── angular-locale_zgh-ma.js
+│   │   │   ├── angular-locale_zgh.js
+│   │   │   ├── angular-locale_zh-cn.js
+│   │   │   ├── angular-locale_zh-hans-cn.js
+│   │   │   ├── angular-locale_zh-hans-hk.js
+│   │   │   ├── angular-locale_zh-hans-mo.js
+│   │   │   ├── angular-locale_zh-hans-sg.js
+│   │   │   ├── angular-locale_zh-hans.js
+│   │   │   ├── angular-locale_zh-hant-hk.js
+│   │   │   ├── angular-locale_zh-hant-mo.js
+│   │   │   ├── angular-locale_zh-hant-tw.js
+│   │   │   ├── angular-locale_zh-hant.js
+│   │   │   ├── angular-locale_zh-hk.js
+│   │   │   ├── angular-locale_zh-tw.js
+│   │   │   ├── angular-locale_zh.js
+│   │   │   ├── angular-locale_zu-za.js
+│   │   │   ├── angular-locale_zu.js
+│   │   │   ├── bower.json
+│   │   │   └── package.json
+│   │   ├── angular-local-storage
+│   │   │   ├── CHANGELOG.md
+│   │   │   ├── LICENSE
+│   │   │   ├── README.md
+│   │   │   ├── bower.json
+│   │   │   ├── demo
+│   │   │   │   ├── demo-app.js
+│   │   │   │   ├── demo-style.css
+│   │   │   │   └── demo.html
+│   │   │   ├── dist
+│   │   │   │   ├── angular-local-storage.js
+│   │   │   │   └── angular-local-storage.min.js
+│   │   │   └── package.json
+│   │   ├── angular-mocks
+│   │   │   ├── README.md
+│   │   │   ├── angular-mocks.js
+│   │   │   ├── bower.json
+│   │   │   └── package.json
+│   │   ├── angular-resource
+│   │   │   ├── README.md
+│   │   │   ├── angular-resource.js
+│   │   │   ├── angular-resource.min.js
+│   │   │   ├── angular-resource.min.js.map
+│   │   │   ├── bower.json
+│   │   │   └── package.json
+│   │   ├── angular-sanitize
+│   │   │   ├── README.md
+│   │   │   ├── angular-sanitize.js
+│   │   │   ├── angular-sanitize.min.js
+│   │   │   ├── angular-sanitize.min.js.map
+│   │   │   ├── bower.json
+│   │   │   └── package.json
+│   │   ├── angular-scenario
+│   │   │   ├── README.md
+│   │   │   ├── angular-scenario.js
+│   │   │   ├── bower.json
+│   │   │   ├── jstd-scenario-adapter-config.js
+│   │   │   ├── jstd-scenario-adapter.js
+│   │   │   └── package.json
+│   │   ├── angular-translate
+│   │   │   ├── README.md
+│   │   │   ├── angular-translate.js
+│   │   │   ├── angular-translate.min.js
+│   │   │   └── bower.json
+│   │   ├── angular-translate-loader-partial
+│   │   │   ├── README.md
+│   │   │   ├── angular-translate-loader-partial.js
+│   │   │   ├── angular-translate-loader-partial.min.js
+│   │   │   └── bower.json
+│   │   ├── angular-translate-storage-cookie
+│   │   │   ├── README.md
+│   │   │   ├── angular-translate-storage-cookie.js
+│   │   │   ├── angular-translate-storage-cookie.min.js
+│   │   │   └── bower.json
+│   │   ├── angular-ui-router
+│   │   │   ├── CHANGELOG.md
+│   │   │   ├── CONTRIBUTING.md
+│   │   │   ├── LICENSE
+│   │   │   ├── README.md
+│   │   │   ├── api
+│   │   │   │   └── angular-ui-router.d.ts
+│   │   │   ├── bower.json
+│   │   │   ├── release
+│   │   │   │   ├── angular-ui-router.js
+│   │   │   │   └── angular-ui-router.min.js
+│   │   │   └── src
+│   │   │       ├── common.js
+│   │   │       ├── resolve.js
+│   │   │       ├── state.js
+│   │   │       ├── stateDirectives.js
+│   │   │       ├── stateFilters.js
+│   │   │       ├── templateFactory.js
+│   │   │       ├── urlMatcherFactory.js
+│   │   │       ├── urlRouter.js
+│   │   │       ├── view.js
+│   │   │       ├── viewDirective.js
+│   │   │       └── viewScroll.js
+│   │   ├── bootstrap
+│   │   │   ├── Gruntfile.js
+│   │   │   ├── LICENSE
+│   │   │   ├── README.md
+│   │   │   ├── bower.json
+│   │   │   ├── dist
+│   │   │   │   ├── css
+│   │   │   │   │   ├── bootstrap-theme.css
+│   │   │   │   │   ├── bootstrap-theme.css.map
+│   │   │   │   │   ├── bootstrap-theme.min.css
+│   │   │   │   │   ├── bootstrap.css
+│   │   │   │   │   ├── bootstrap.css.map
+│   │   │   │   │   └── bootstrap.min.css
+│   │   │   │   ├── fonts
+│   │   │   │   │   ├── glyphicons-halflings-regular.eot
+│   │   │   │   │   ├── glyphicons-halflings-regular.svg
+│   │   │   │   │   ├── glyphicons-halflings-regular.ttf
+│   │   │   │   │   ├── glyphicons-halflings-regular.woff
+│   │   │   │   │   └── glyphicons-halflings-regular.woff2
+│   │   │   │   └── js
+│   │   │   │       ├── bootstrap.js
+│   │   │   │       ├── bootstrap.min.js
+│   │   │   │       └── npm.js
+│   │   │   ├── fonts
+│   │   │   │   ├── glyphicons-halflings-regular.eot
+│   │   │   │   ├── glyphicons-halflings-regular.svg
+│   │   │   │   ├── glyphicons-halflings-regular.ttf
+│   │   │   │   ├── glyphicons-halflings-regular.woff
+│   │   │   │   └── glyphicons-halflings-regular.woff2
+│   │   │   ├── grunt
+│   │   │   │   ├── bs-commonjs-generator.js
+│   │   │   │   ├── bs-glyphicons-data-generator.js
+│   │   │   │   ├── bs-lessdoc-parser.js
+│   │   │   │   ├── bs-raw-files-generator.js
+│   │   │   │   ├── configBridge.json
+│   │   │   │   └── sauce_browsers.yml
+│   │   │   ├── js
+│   │   │   │   ├── affix.js
+│   │   │   │   ├── alert.js
+│   │   │   │   ├── button.js
+│   │   │   │   ├── carousel.js
+│   │   │   │   ├── collapse.js
+│   │   │   │   ├── dropdown.js
+│   │   │   │   ├── modal.js
+│   │   │   │   ├── popover.js
+│   │   │   │   ├── scrollspy.js
+│   │   │   │   ├── tab.js
+│   │   │   │   ├── tooltip.js
+│   │   │   │   └── transition.js
+│   │   │   ├── less
+│   │   │   │   ├── alerts.less
+│   │   │   │   ├── badges.less
+│   │   │   │   ├── bootstrap.less
+│   │   │   │   ├── breadcrumbs.less
+│   │   │   │   ├── button-groups.less
+│   │   │   │   ├── buttons.less
+│   │   │   │   ├── carousel.less
+│   │   │   │   ├── close.less
+│   │   │   │   ├── code.less
+│   │   │   │   ├── component-animations.less
+│   │   │   │   ├── dropdowns.less
+│   │   │   │   ├── forms.less
+│   │   │   │   ├── glyphicons.less
+│   │   │   │   ├── grid.less
+│   │   │   │   ├── input-groups.less
+│   │   │   │   ├── jumbotron.less
+│   │   │   │   ├── labels.less
+│   │   │   │   ├── list-group.less
+│   │   │   │   ├── media.less
+│   │   │   │   ├── mixins
+│   │   │   │   │   ├── alerts.less
+│   │   │   │   │   ├── background-variant.less
+│   │   │   │   │   ├── border-radius.less
+│   │   │   │   │   ├── buttons.less
+│   │   │   │   │   ├── center-block.less
+│   │   │   │   │   ├── clearfix.less
+│   │   │   │   │   ├── forms.less
+│   │   │   │   │   ├── gradients.less
+│   │   │   │   │   ├── grid-framework.less
+│   │   │   │   │   ├── grid.less
+│   │   │   │   │   ├── hide-text.less
+│   │   │   │   │   ├── image.less
+│   │   │   │   │   ├── labels.less
+│   │   │   │   │   ├── list-group.less
+│   │   │   │   │   ├── nav-divider.less
+│   │   │   │   │   ├── nav-vertical-align.less
+│   │   │   │   │   ├── opacity.less
+│   │   │   │   │   ├── pagination.less
+│   │   │   │   │   ├── panels.less
+│   │   │   │   │   ├── progress-bar.less
+│   │   │   │   │   ├── reset-filter.less
+│   │   │   │   │   ├── resize.less
+│   │   │   │   │   ├── responsive-visibility.less
+│   │   │   │   │   ├── size.less
+│   │   │   │   │   ├── tab-focus.less
+│   │   │   │   │   ├── table-row.less
+│   │   │   │   │   ├── text-emphasis.less
+│   │   │   │   │   ├── text-overflow.less
+│   │   │   │   │   └── vendor-prefixes.less
+│   │   │   │   ├── mixins.less
+│   │   │   │   ├── modals.less
+│   │   │   │   ├── navbar.less
+│   │   │   │   ├── navs.less
+│   │   │   │   ├── normalize.less
+│   │   │   │   ├── pager.less
+│   │   │   │   ├── pagination.less
+│   │   │   │   ├── panels.less
+│   │   │   │   ├── popovers.less
+│   │   │   │   ├── print.less
+│   │   │   │   ├── progress-bars.less
+│   │   │   │   ├── responsive-embed.less
+│   │   │   │   ├── responsive-utilities.less
+│   │   │   │   ├── scaffolding.less
+│   │   │   │   ├── tables.less
+│   │   │   │   ├── theme.less
+│   │   │   │   ├── thumbnails.less
+│   │   │   │   ├── tooltip.less
+│   │   │   │   ├── type.less
+│   │   │   │   ├── utilities.less
+│   │   │   │   ├── variables.less
+│   │   │   │   └── wells.less
+│   │   │   └── package.json
+│   │   ├── jquery
+│   │   │   ├── MIT-LICENSE.txt
+│   │   │   ├── bower.json
+│   │   │   ├── dist
+│   │   │   │   ├── jquery.js
+│   │   │   │   ├── jquery.min.js
+│   │   │   │   └── jquery.min.map
+│   │   │   └── src
+│   │   │       ├── ajax
+│   │   │       │   ├── jsonp.js
+│   │   │       │   ├── load.js
+│   │   │       │   ├── parseJSON.js
+│   │   │       │   ├── parseXML.js
+│   │   │       │   ├── script.js
+│   │   │       │   ├── var
+│   │   │       │   │   ├── nonce.js
+│   │   │       │   │   └── rquery.js
+│   │   │       │   └── xhr.js
+│   │   │       ├── ajax.js
+│   │   │       ├── attributes
+│   │   │       │   ├── attr.js
+│   │   │       │   ├── classes.js
+│   │   │       │   ├── prop.js
+│   │   │       │   ├── support.js
+│   │   │       │   └── val.js
+│   │   │       ├── attributes.js
+│   │   │       ├── callbacks.js
+│   │   │       ├── core
+│   │   │       │   ├── access.js
+│   │   │       │   ├── init.js
+│   │   │       │   ├── parseHTML.js
+│   │   │       │   ├── ready.js
+│   │   │       │   └── var
+│   │   │       │       └── rsingleTag.js
+│   │   │       ├── core.js
+│   │   │       ├── css
+│   │   │       │   ├── addGetHookIf.js
+│   │   │       │   ├── curCSS.js
+│   │   │       │   ├── defaultDisplay.js
+│   │   │       │   ├── hiddenVisibleSelectors.js
+│   │   │       │   ├── support.js
+│   │   │       │   ├── swap.js
+│   │   │       │   └── var
+│   │   │       │       ├── cssExpand.js
+│   │   │       │       ├── getStyles.js
+│   │   │       │       ├── isHidden.js
+│   │   │       │       ├── rmargin.js
+│   │   │       │       └── rnumnonpx.js
+│   │   │       ├── css.js
+│   │   │       ├── data
+│   │   │       │   ├── Data.js
+│   │   │       │   ├── accepts.js
+│   │   │       │   └── var
+│   │   │       │       ├── data_priv.js
+│   │   │       │       └── data_user.js
+│   │   │       ├── data.js
+│   │   │       ├── deferred.js
+│   │   │       ├── deprecated.js
+│   │   │       ├── dimensions.js
+│   │   │       ├── effects
+│   │   │       │   ├── Tween.js
+│   │   │       │   └── animatedSelector.js
+│   │   │       ├── effects.js
+│   │   │       ├── event
+│   │   │       │   ├── ajax.js
+│   │   │       │   ├── alias.js
+│   │   │       │   └── support.js
+│   │   │       ├── event.js
+│   │   │       ├── exports
+│   │   │       │   ├── amd.js
+│   │   │       │   └── global.js
+│   │   │       ├── intro.js
+│   │   │       ├── jquery.js
+│   │   │       ├── manipulation
+│   │   │       │   ├── _evalUrl.js
+│   │   │       │   ├── support.js
+│   │   │       │   └── var
+│   │   │       │       └── rcheckableType.js
+│   │   │       ├── manipulation.js
+│   │   │       ├── offset.js
+│   │   │       ├── outro.js
+│   │   │       ├── queue
+│   │   │       │   └── delay.js
+│   │   │       ├── queue.js
+│   │   │       ├── selector-native.js
+│   │   │       ├── selector-sizzle.js
+│   │   │       ├── selector.js
+│   │   │       ├── serialize.js
+│   │   │       ├── sizzle
+│   │   │       │   └── dist
+│   │   │       │       ├── sizzle.js
+│   │   │       │       ├── sizzle.min.js
+│   │   │       │       └── sizzle.min.map
+│   │   │       ├── traversing
+│   │   │       │   ├── findFilter.js
+│   │   │       │   └── var
+│   │   │       │       └── rneedsContext.js
+│   │   │       ├── traversing.js
+│   │   │       ├── var
+│   │   │       │   ├── arr.js
+│   │   │       │   ├── class2type.js
+│   │   │       │   ├── concat.js
+│   │   │       │   ├── hasOwn.js
+│   │   │       │   ├── indexOf.js
+│   │   │       │   ├── pnum.js
+│   │   │       │   ├── push.js
+│   │   │       │   ├── rnotwhite.js
+│   │   │       │   ├── slice.js
+│   │   │       │   ├── strundefined.js
+│   │   │       │   ├── support.js
+│   │   │       │   └── toString.js
+│   │   │       └── wrap.js
+│   │   ├── json3
+│   │   │   ├── CHANGELOG.md
+│   │   │   ├── CONTRIBUTING.md
+│   │   │   ├── LICENSE
+│   │   │   ├── README.md
+│   │   │   ├── bower.json
+│   │   │   └── lib
+│   │   │       ├── json3.js
+│   │   │       └── json3.min.js
+│   │   ├── modernizr
+│   │   │   ├── feature-detects
+│   │   │   │   ├── a-download.js
+│   │   │   │   ├── audio-audiodata-api.js
+│   │   │   │   ├── audio-webaudio-api.js
+│   │   │   │   ├── battery-api.js
+│   │   │   │   ├── battery-level.js
+│   │   │   │   ├── blob-constructor.js
+│   │   │   │   ├── canvas-todataurl-type.js
+│   │   │   │   ├── contenteditable.js
+│   │   │   │   ├── contentsecuritypolicy.js
+│   │   │   │   ├── contextmenu.js
+│   │   │   │   ├── cookies.js
+│   │   │   │   ├── cors.js
+│   │   │   │   ├── css-backgroundposition-shorthand.js
+│   │   │   │   ├── css-backgroundposition-xy.js
+│   │   │   │   ├── css-backgroundrepeat.js
+│   │   │   │   ├── css-backgroundsizecover.js
+│   │   │   │   ├── css-boxsizing.js
+│   │   │   │   ├── css-calc.js
+│   │   │   │   ├── css-cubicbezierrange.js
+│   │   │   │   ├── css-displayrunin.js
+│   │   │   │   ├── css-displaytable.js
+│   │   │   │   ├── css-filters.js
+│   │   │   │   ├── css-hyphens.js
+│   │   │   │   ├── css-lastchild.js
+│   │   │   │   ├── css-mask.js
+│   │   │   │   ├── css-mediaqueries.js
+│   │   │   │   ├── css-objectfit.js
+│   │   │   │   ├── css-overflow-scrolling.js
+│   │   │   │   ├── css-pointerevents.js
+│   │   │   │   ├── css-positionsticky.js
+│   │   │   │   ├── css-regions.js
+│   │   │   │   ├── css-remunit.js
+│   │   │   │   ├── css-resize.js
+│   │   │   │   ├── css-scrollbars.js
+│   │   │   │   ├── css-shapes.js
+│   │   │   │   ├── css-subpixelfont.js
+│   │   │   │   ├── css-supports.js
+│   │   │   │   ├── css-userselect.js
+│   │   │   │   ├── css-vhunit.js
+│   │   │   │   ├── css-vmaxunit.js
+│   │   │   │   ├── css-vminunit.js
+│   │   │   │   ├── css-vwunit.js
+│   │   │   │   ├── custom-protocol-handler.js
+│   │   │   │   ├── dart.js
+│   │   │   │   ├── dataview-api.js
+│   │   │   │   ├── dom-classlist.js
+│   │   │   │   ├── dom-createElement-attrs.js
+│   │   │   │   ├── dom-dataset.js
+│   │   │   │   ├── dom-microdata.js
+│   │   │   │   ├── elem-datalist.js
+│   │   │   │   ├── elem-details.js
+│   │   │   │   ├── elem-output.js
+│   │   │   │   ├── elem-progress-meter.js
+│   │   │   │   ├── elem-ruby.js
+│   │   │   │   ├── elem-time.js
+│   │   │   │   ├── elem-track.js
+│   │   │   │   ├── emoji.js
+│   │   │   │   ├── es5-strictmode.js
+│   │   │   │   ├── event-deviceorientation-motion.js
+│   │   │   │   ├── exif-orientation.js
+│   │   │   │   ├── file-api.js
+│   │   │   │   ├── file-filesystem.js
+│   │   │   │   ├── forms-fileinput.js
+│   │   │   │   ├── forms-formattribute.js
+│   │   │   │   ├── forms-inputnumber-l10n.js
+│   │   │   │   ├── forms-placeholder.js
+│   │   │   │   ├── forms-speechinput.js
+│   │   │   │   ├── forms-validation.js
+│   │   │   │   ├── fullscreen-api.js
+│   │   │   │   ├── gamepad.js
+│   │   │   │   ├── getusermedia.js
+│   │   │   │   ├── ie8compat.js
+│   │   │   │   ├── iframe-sandbox.js
+│   │   │   │   ├── iframe-seamless.js
+│   │   │   │   ├── iframe-srcdoc.js
+│   │   │   │   ├── img-apng.js
+│   │   │   │   ├── img-webp.js
+│   │   │   │   ├── json.js
+│   │   │   │   ├── lists-reversed.js
+│   │   │   │   ├── mathml.js
+│   │   │   │   ├── network-connection.js
+│   │   │   │   ├── network-eventsource.js
+│   │   │   │   ├── network-xhr2.js
+│   │   │   │   ├── notification.js
+│   │   │   │   ├── performance.js
+│   │   │   │   ├── pointerlock-api.js
+│   │   │   │   ├── quota-management-api.js
+│   │   │   │   ├── requestanimationframe.js
+│   │   │   │   ├── script-async.js
+│   │   │   │   ├── script-defer.js
+│   │   │   │   ├── style-scoped.js
+│   │   │   │   ├── svg-filters.js
+│   │   │   │   ├── unicode.js
+│   │   │   │   ├── url-data-uri.js
+│   │   │   │   ├── userdata.js
+│   │   │   │   ├── vibration.js
+│   │   │   │   ├── web-intents.js
+│   │   │   │   ├── webgl-extensions.js
+│   │   │   │   ├── websockets-binary.js
+│   │   │   │   ├── window-framed.js
+│   │   │   │   ├── workers-blobworkers.js
+│   │   │   │   ├── workers-dataworkers.js
+│   │   │   │   └── workers-sharedworkers.js
+│   │   │   ├── grunt.js
+│   │   │   ├── media
+│   │   │   │   ├── Modernizr\ 2\ Logo.ai
+│   │   │   │   ├── Modernizr\ 2\ Logo.eps
+│   │   │   │   ├── Modernizr\ 2\ Logo.pdf
+│   │   │   │   ├── Modernizr\ 2\ Logo.png
+│   │   │   │   └── Modernizr\ 2\ Logo.svg
+│   │   │   ├── modernizr.js
+│   │   │   ├── readme.md
+│   │   │   └── test
+│   │   │       ├── basic.html
+│   │   │       ├── caniuse.html
+│   │   │       ├── caniuse_files
+│   │   │       │   ├── Windsong-webfont.eot
+│   │   │       │   ├── Windsong-webfont.otf
+│   │   │       │   ├── Windsong-webfont.svg
+│   │   │       │   ├── Windsong-webfont.ttf
+│   │   │       │   ├── Windsong-webfont.woff
+│   │   │       │   ├── alpha.png
+│   │   │       │   ├── apng_test.png
+│   │   │       │   ├── before-after.png
+│   │   │       │   ├── form_validation.html
+│   │   │       │   ├── ga.js
+│   │   │       │   ├── green5x5.png
+│   │   │       │   ├── hashchange.html
+│   │   │       │   ├── jquery.min.js
+│   │   │       │   ├── mathml.html
+│   │   │       │   ├── mathml_ref.png
+│   │   │       │   ├── modernizr-1.7.min.js
+│   │   │       │   ├── png_alpha_result.png
+│   │   │       │   ├── pushstate.html
+│   │   │       │   ├── red30x30.png
+│   │   │       │   ├── ruby.png
+│   │   │       │   ├── stroked-text.png
+│   │   │       │   ├── style.css
+│   │   │       │   ├── svg-html-blur.png
+│   │   │       │   ├── svg-img.svg
+│   │   │       │   ├── svg-img.svg.1
+│   │   │       │   ├── svg_blur.png
+│   │   │       │   ├── table.png
+│   │   │       │   ├── text-shadow1.png
+│   │   │       │   ├── text-shadow2.png
+│   │   │       │   ├── windsong_font.png
+│   │   │       │   └── xhtml.html
+│   │   │       ├── index.html
+│   │   │       ├── js
+│   │   │       │   ├── basic.html
+│   │   │       │   ├── dumpdata.js
+│   │   │       │   ├── lib
+│   │   │       │   │   ├── detect-global.js
+│   │   │       │   │   ├── jquery-1.7b2.js
+│   │   │       │   │   ├── jsonselect.js
+│   │   │       │   │   ├── polyfills.js
+│   │   │       │   │   └── uaparser.js
+│   │   │       │   ├── setup.js
+│   │   │       │   ├── unit-caniuse.js
+│   │   │       │   └── unit.js
+│   │   │       └── qunit
+│   │   │           ├── qunit.css
+│   │   │           ├── qunit.js
+│   │   │           └── run-qunit.js
+│   │   ├── ngInfiniteScroll
+│   │   │   ├── LICENSE
+│   │   │   ├── README.md
+│   │   │   ├── bower.json
+│   │   │   ├── build
+│   │   │   │   ├── ng-infinite-scroll.js
+│   │   │   │   └── ng-infinite-scroll.min.js
+│   │   │   ├── package.json
+│   │   │   └── src
+│   │   │       └── infinite-scroll.coffee
+│   │   └── swagger-ui
+│   │       ├── Cakefile
+│   │       ├── LICENSE
+│   │       ├── README.md
+│   │       ├── bin
+│   │       │   ├── CoffeeScript.png
+│   │       │   ├── jasmine-1.1.0
+│   │       │   │   ├── MIT.LICENSE
+│   │       │   │   ├── jasmine-html.js
+│   │       │   │   ├── jasmine.css
+│   │       │   │   ├── jasmine.js
+│   │       │   │   ├── jasmine.sass
+│   │       │   │   └── jasmine_favicon.png
+│   │       │   └── yuicompressor-2.4.7.jar
+│   │       ├── dist
+│   │       │   ├── css
+│   │       │   │   ├── reset.css
+│   │       │   │   └── screen.css
+│   │       │   ├── images
+│   │       │   │   ├── explorer_icons.png
+│   │       │   │   ├── logo_small.png
+│   │       │   │   ├── pet_store_api.png
+│   │       │   │   ├── throbber.gif
+│   │       │   │   └── wordnik_api.png
+│   │       │   ├── index.html
+│   │       │   ├── lib
+│   │       │   │   ├── backbone-min.js
+│   │       │   │   ├── handlebars-1.0.0.js
+│   │       │   │   ├── highlight.7.3.pack.js
+│   │       │   │   ├── jquery-1.8.0.min.js
+│   │       │   │   ├── jquery.ba-bbq.min.js
+│   │       │   │   ├── jquery.slideto.min.js
+│   │       │   │   ├── jquery.wiggle.min.js
+│   │       │   │   ├── shred
+│   │       │   │   │   └── content.js
+│   │       │   │   ├── shred.bundle.js
+│   │       │   │   ├── swagger-oauth.js
+│   │       │   │   ├── swagger.js
+│   │       │   │   └── underscore-min.js
+│   │       │   ├── o2c.html
+│   │       │   ├── swagger-ui.js
+│   │       │   └── swagger-ui.min.js
+│   │       ├── index.js
+│   │       ├── lib
+│   │       │   ├── backbone-min.js
+│   │       │   ├── handlebars-1.0.0.js
+│   │       │   ├── highlight.7.3.pack.js
+│   │       │   ├── jquery-1.8.0.min.js
+│   │       │   ├── jquery.ba-bbq.min.js
+│   │       │   ├── jquery.slideto.min.js
+│   │       │   ├── jquery.wiggle.min.js
+│   │       │   ├── shred
+│   │       │   │   └── content.js
+│   │       │   ├── shred.bundle.js
+│   │       │   ├── swagger-oauth.js
+│   │       │   ├── swagger.js
+│   │       │   └── underscore-min.js
+│   │       ├── package.json
+│   │       ├── src
+│   │       │   ├── main
+│   │       │   │   ├── coffeescript
+│   │       │   │   │   ├── SwaggerUi.coffee
+│   │       │   │   │   └── view
+│   │       │   │   │       ├── ContentTypeView.coffee
+│   │       │   │   │       ├── HeaderView.coffee
+│   │       │   │   │       ├── MainView.coffee
+│   │       │   │   │       ├── OperationView.coffee
+│   │       │   │   │       ├── ParameterContentTypeView.coffee
+│   │       │   │   │       ├── ParameterView.coffee
+│   │       │   │   │       ├── ResourceView.coffee
+│   │       │   │   │       ├── ResponseContentTypeView.coffee
+│   │       │   │   │       ├── SignatureView.coffee
+│   │       │   │   │       └── StatusCodeView.coffee
+│   │       │   │   ├── html
+│   │       │   │   │   ├── css
+│   │       │   │   │   │   ├── reset.css
+│   │       │   │   │   │   └── screen.css
+│   │       │   │   │   ├── images
+│   │       │   │   │   │   ├── explorer_icons.png
+│   │       │   │   │   │   ├── logo_small.png
+│   │       │   │   │   │   ├── pet_store_api.png
+│   │       │   │   │   │   ├── throbber.gif
+│   │       │   │   │   │   └── wordnik_api.png
+│   │       │   │   │   ├── index.html
+│   │       │   │   │   └── o2c.html
+│   │       │   │   ├── javascript
+│   │       │   │   │   └── doc.js
+│   │       │   │   ├── less
+│   │       │   │   │   ├── auth.less
+│   │       │   │   │   ├── highlight_default.less
+│   │       │   │   │   ├── reset.less
+│   │       │   │   │   ├── screen.less
+│   │       │   │   │   └── specs.less
+│   │       │   │   └── template
+│   │       │   │       ├── content_type.handlebars
+│   │       │   │       ├── main.handlebars
+│   │       │   │       ├── operation.handlebars
+│   │       │   │       ├── param.handlebars
+│   │       │   │       ├── param_list.handlebars
+│   │       │   │       ├── param_readonly.handlebars
+│   │       │   │       ├── param_readonly_required.handlebars
+│   │       │   │       ├── param_required.handlebars
+│   │       │   │       ├── parameter_content_type.handlebars
+│   │       │   │       ├── resource.handlebars
+│   │       │   │       ├── response_content_type.handlebars
+│   │       │   │       ├── signature.handlebars
+│   │       │   │       └── status_code.handlebars
+│   │       │   └── test
+│   │       │       ├── spec.html
+│   │       │       └── swagger-ui-spec.coffee
+│   │       └── swagger-ui.json
+│   ├── dist
+│   │   ├── assets
+│   │   │   ├── images
+│   │   │   │   ├── development_ribbon.png
+│   │   │   │   ├── hipster.png
+│   │   │   │   └── hipster2x.png
+│   │   │   └── styles
+│   │   │       ├── main-74e7bce1.css
+│   │   │       └── vendor-018b70c1.css
+│   │   ├── i18n
+│   │   │   ├── en
+│   │   │   │   ├── activate.json
+│   │   │   │   ├── audits.json
+│   │   │   │   ├── author.json
+│   │   │   │   ├── book.json
+│   │   │   │   ├── configuration.json
+│   │   │   │   ├── error.json
+│   │   │   │   ├── global.json
+│   │   │   │   ├── health.json
+│   │   │   │   ├── language.json
+│   │   │   │   ├── login.json
+│   │   │   │   ├── logs.json
+│   │   │   │   ├── main.json
+│   │   │   │   ├── metrics.json
+│   │   │   │   ├── password.json
+│   │   │   │   ├── register.json
+│   │   │   │   ├── sessions.json
+│   │   │   │   └── settings.json
+│   │   │   └── fr
+│   │   │       ├── activate.json
+│   │   │       ├── audits.json
+│   │   │       ├── author.json
+│   │   │       ├── book.json
+│   │   │       ├── configuration.json
+│   │   │       ├── error.json
+│   │   │       ├── global.json
+│   │   │       ├── health.json
+│   │   │       ├── language.json
+│   │   │       ├── login.json
+│   │   │       ├── logs.json
+│   │   │       ├── main.json
+│   │   │       ├── metrics.json
+│   │   │       ├── password.json
+│   │   │       ├── register.json
+│   │   │       ├── sessions.json
+│   │   │       └── settings.json
+│   │   └── scripts
+│   │       ├── app-1cf81168.js
+│   │       └── vendor-92175e2c.js
+│   ├── favicon.ico
+│   ├── i18n
+│   │   ├── en
+│   │   │   ├── activate.json
+│   │   │   ├── audits.json
+│   │   │   ├── author.json
+│   │   │   ├── book.json
+│   │   │   ├── configuration.json
+│   │   │   ├── error.json
+│   │   │   ├── global.json
+│   │   │   ├── health.json
+│   │   │   ├── language.json
+│   │   │   ├── login.json
+│   │   │   ├── logs.json
+│   │   │   ├── main.json
+│   │   │   ├── metrics.json
+│   │   │   ├── password.json
+│   │   │   ├── register.json
+│   │   │   ├── sessions.json
+│   │   │   └── settings.json
+│   │   └── fr
+│   │       ├── activate.json
+│   │       ├── audits.json
+│   │       ├── author.json
+│   │       ├── book.json
+│   │       ├── configuration.json
+│   │       ├── error.json
+│   │       ├── global.json
+│   │       ├── health.json
+│   │       ├── language.json
+│   │       ├── login.json
+│   │       ├── logs.json
+│   │       ├── main.json
+│   │       ├── metrics.json
+│   │       ├── password.json
+│   │       ├── register.json
+│   │       ├── sessions.json
+│   │       └── settings.json
+│   ├── index.html
+│   ├── robots.txt
+│   ├── scripts
+│   │   ├── app
+│   │   │   ├── account
+│   │   │   │   ├── account.js
+│   │   │   │   ├── activate
+│   │   │   │   │   ├── activate.controller.js
+│   │   │   │   │   ├── activate.html
+│   │   │   │   │   └── activate.js
+│   │   │   │   ├── login
+│   │   │   │   │   ├── login.controller.js
+│   │   │   │   │   ├── login.html
+│   │   │   │   │   └── login.js
+│   │   │   │   ├── logout
+│   │   │   │   │   ├── logout.controller.js
+│   │   │   │   │   └── logout.js
+│   │   │   │   ├── password
+│   │   │   │   │   ├── password.controller.js
+│   │   │   │   │   ├── password.directive.js
+│   │   │   │   │   ├── password.html
+│   │   │   │   │   └── password.js
+│   │   │   │   ├── register
+│   │   │   │   │   ├── register.controller.js
+│   │   │   │   │   ├── register.html
+│   │   │   │   │   └── register.js
+│   │   │   │   ├── sessions
+│   │   │   │   │   ├── sessions.controller.js
+│   │   │   │   │   ├── sessions.html
+│   │   │   │   │   └── sessions.js
+│   │   │   │   └── settings
+│   │   │   │       ├── settings.controller.js
+│   │   │   │       ├── settings.html
+│   │   │   │       └── settings.js
+│   │   │   ├── admin
+│   │   │   │   ├── admin.js
+│   │   │   │   ├── audits
+│   │   │   │   │   ├── audits.controller.js
+│   │   │   │   │   ├── audits.html
+│   │   │   │   │   └── audits.js
+│   │   │   │   ├── configuration
+│   │   │   │   │   ├── configuration.controller.js
+│   │   │   │   │   ├── configuration.html
+│   │   │   │   │   └── configuration.js
+│   │   │   │   ├── docs
+│   │   │   │   │   ├── docs.html
+│   │   │   │   │   └── docs.js
+│   │   │   │   ├── health
+│   │   │   │   │   ├── health.controller.js
+│   │   │   │   │   ├── health.html
+│   │   │   │   │   └── health.js
+│   │   │   │   ├── logs
+│   │   │   │   │   ├── logs.controller.js
+│   │   │   │   │   ├── logs.html
+│   │   │   │   │   └── logs.js
+│   │   │   │   └── metrics
+│   │   │   │       ├── metrics.controller.js
+│   │   │   │       ├── metrics.html
+│   │   │   │       └── metrics.js
+│   │   │   ├── app.constants.js
+│   │   │   ├── app.js
+│   │   │   ├── entities
+│   │   │   │   ├── author
+│   │   │   │   │   ├── author-detail.controller.js
+│   │   │   │   │   ├── author-detail.html
+│   │   │   │   │   ├── author.controller.js
+│   │   │   │   │   ├── author.js
+│   │   │   │   │   └── authors.html
+│   │   │   │   ├── book
+│   │   │   │   │   ├── book-detail.controller.js
+│   │   │   │   │   ├── book-detail.html
+│   │   │   │   │   ├── book.controller.js
+│   │   │   │   │   ├── book.js
+│   │   │   │   │   └── books.html
+│   │   │   │   └── entity.js
+│   │   │   ├── error
+│   │   │   │   ├── accessdenied.html
+│   │   │   │   ├── error.html
+│   │   │   │   └── error.js
+│   │   │   └── main
+│   │   │       ├── main.controller.js
+│   │   │       ├── main.html
+│   │   │       └── main.js
+│   │   └── components
+│   │       ├── admin
+│   │       │   ├── audits.service.js
+│   │       │   ├── configuration.service.js
+│   │       │   ├── logs.service.js
+│   │       │   └── monitoring.service.js
+│   │       ├── auth
+│   │       │   ├── auth.service.js
+│   │       │   ├── authority.directive.js
+│   │       │   ├── principal.service.js
+│   │       │   ├── provider
+│   │       │   │   └── auth.session.service.js
+│   │       │   └── services
+│   │       │       ├── account.service.js
+│   │       │       ├── activate.service.js
+│   │       │       ├── password.service.js
+│   │       │       ├── register.service.js
+│   │       │       └── sessions.service.js
+│   │       ├── entities
+│   │       │   ├── author
+│   │       │   │   └── author.service.js
+│   │       │   └── book
+│   │       │       └── book.service.js
+│   │       ├── form
+│   │       │   ├── form.directive.js
+│   │       │   ├── pager.directive.js
+│   │       │   ├── pager.html
+│   │       │   ├── pagination.directive.js
+│   │       │   └── pagination.html
+│   │       ├── language
+│   │       │   ├── language.controller.js
+│   │       │   └── language.service.js
+│   │       ├── navbar
+│   │       │   ├── navbar.controller.js
+│   │       │   ├── navbar.directive.js
+│   │       │   └── navbar.html
+│   │       ├── user
+│   │       │   └── user.service.js
+│   │       └── util
+│   │           ├── base64.service.js
+│   │           ├── parse-links.service.js
+│   │           └── truncate.filter.js
+│   └── swagger-ui
+│       ├── images
+│       │   └── throbber.gif
+│       └── index.html
+├── bookstore-0.0.1-SNAPSHOT.war
+├── bookstore-0.0.1-SNAPSHOT.war.original
+├── classes
+│   ├── banner.txt
+│   ├── com
+│   │   └── mycompany
+│   │       └── myapp
+│   │           ├── Application.class
+│   │           ├── ApplicationWebXml.class
+│   │           ├── aop
+│   │           │   └── logging
+│   │           │       └── LoggingAspect.class
+│   │           ├── async
+│   │           │   ├── ExceptionHandlingAsyncTaskExecutor$1.class
+│   │           │   ├── ExceptionHandlingAsyncTaskExecutor$2.class
+│   │           │   └── ExceptionHandlingAsyncTaskExecutor.class
+│   │           ├── config
+│   │           │   ├── AsyncConfiguration.class
+│   │           │   ├── CacheConfiguration.class
+│   │           │   ├── CloudDatabaseConfiguration.class
+│   │           │   ├── Constants.class
+│   │           │   ├── DatabaseConfiguration.class
+│   │           │   ├── JacksonConfiguration.class
+│   │           │   ├── LocaleConfiguration.class
+│   │           │   ├── LoggingAspectConfiguration.class
+│   │           │   ├── MailConfiguration.class
+│   │           │   ├── MetricsConfiguration$GraphiteRegistry.class
+│   │           │   ├── MetricsConfiguration.class
+│   │           │   ├── SecurityConfiguration.class
+│   │           │   ├── ThymeleafConfiguration.class
+│   │           │   ├── WebConfigurer.class
+│   │           │   ├── apidoc
+│   │           │   │   └── SwaggerConfiguration.class
+│   │           │   ├── audit
+│   │           │   │   └── AuditEventConverter.class
+│   │           │   ├── locale
+│   │           │   │   ├── AngularCookieLocaleResolver$1.class
+│   │           │   │   └── AngularCookieLocaleResolver.class
+│   │           │   └── metrics
+│   │           │       ├── DatabaseHealthIndicator$1.class
+│   │           │       ├── DatabaseHealthIndicator.class
+│   │           │       ├── JHipsterHealthIndicatorConfiguration.class
+│   │           │       └── JavaMailHealthIndicator.class
+│   │           ├── domain
+│   │           │   ├── AbstractAuditingEntity.class
+│   │           │   ├── Author.class
+│   │           │   ├── Authority.class
+│   │           │   ├── Book.class
+│   │           │   ├── PersistentAuditEvent.class
+│   │           │   ├── PersistentToken.class
+│   │           │   ├── User.class
+│   │           │   └── util
+│   │           │       ├── CustomDateTimeDeserializer.class
+│   │           │       ├── CustomDateTimeSerializer.class
+│   │           │       ├── CustomLocalDateSerializer.class
+│   │           │       └── ISO8601LocalDateDeserializer.class
+│   │           ├── repository
+│   │           │   ├── AuthorRepository.class
+│   │           │   ├── AuthorityRepository.class
+│   │           │   ├── BookRepository.class
+│   │           │   ├── CustomAuditEventRepository$1.class
+│   │           │   ├── CustomAuditEventRepository.class
+│   │           │   ├── PersistenceAuditEventRepository.class
+│   │           │   ├── PersistentTokenRepository.class
+│   │           │   └── UserRepository.class
+│   │           ├── security
+│   │           │   ├── AjaxAuthenticationFailureHandler.class
+│   │           │   ├── AjaxAuthenticationSuccessHandler.class
+│   │           │   ├── AjaxLogoutSuccessHandler.class
+│   │           │   ├── AuthoritiesConstants.class
+│   │           │   ├── CustomPersistentRememberMeServices.class
+│   │           │   ├── Http401UnauthorizedEntryPoint.class
+│   │           │   ├── SecurityUtils.class
+│   │           │   ├── SpringSecurityAuditorAware.class
+│   │           │   ├── UserDetailsService.class
+│   │           │   └── UserNotActivatedException.class
+│   │           ├── service
+│   │           │   ├── AuditEventService.class
+│   │           │   ├── MailService.class
+│   │           │   ├── UserService.class
+│   │           │   └── util
+│   │           │       └── RandomUtil.class
+│   │           └── web
+│   │               ├── filter
+│   │               │   ├── CachingHttpHeadersFilter.class
+│   │               │   ├── CsrfCookieGeneratorFilter.class
+│   │               │   ├── StaticResourcesProductionFilter.class
+│   │               │   └── gzip
+│   │               │       ├── GZipResponseUtil.class
+│   │               │       ├── GZipServletFilter.class
+│   │               │       ├── GZipServletOutputStream.class
+│   │               │       ├── GZipServletResponseWrapper.class
+│   │               │       └── GzipResponseHeadersNotModifiableException.class
+│   │               ├── propertyeditors
+│   │               │   └── LocaleDateTimeEditor.class
+│   │               └── rest
+│   │                   ├── AccountResource.class
+│   │                   ├── AuditResource.class
+│   │                   ├── AuthorResource.class
+│   │                   ├── BookResource.class
+│   │                   ├── LogsResource.class
+│   │                   ├── UserResource.class
+│   │                   ├── dto
+│   │                   │   ├── LoggerDTO.class
+│   │                   │   └── UserDTO.class
+│   │                   └── util
+│   │                       └── PaginationUtil.class
+│   ├── config
+│   │   ├── application-dev.yml
+│   │   ├── application-prod.yml
+│   │   ├── application.yml
+│   │   └── liquibase
+│   │       ├── authorities.csv
+│   │       ├── changelog
+│   │       │   ├── 00000000000000_initial_schema.xml
+│   │       │   ├── 20150503152511_added_entity_Author.xml
+│   │       │   └── 20150503152919_added_entity_Book.xml
+│   │       ├── master.xml
+│   │       ├── users.csv
+│   │       └── users_authorities.csv
+│   ├── i18n
+│   │   ├── messages_en.properties
+│   │   └── messages_fr.properties
+│   ├── logback.xml
+│   ├── mails
+│   │   └── activationEmail.html
+│   └── templates
+│       └── error.html
+├── generated-sources
+│   └── annotations
+├── generated-test-sources
+│   └── test-annotations
+├── maven-archiver
+│   └── pom.properties
+├── maven-status
+│   └── maven-compiler-plugin
+│       ├── compile
+│       │   └── default-compile
+│       │       ├── createdFiles.lst
+│       │       └── inputFiles.lst
+│       └── testCompile
+│           └── default-testCompile
+│               ├── createdFiles.lst
+│               └── inputFiles.lst
+└── test-classes
+    ├── com
+    │   └── mycompany
+    │       └── myapp
+    │           ├── security
+    │           │   └── SecurityUtilsTest.class
+    │           ├── service
+    │           │   └── UserServiceTest.class
+    │           └── web
+    │               └── rest
+    │                   ├── AccountResourceTest$1.class
+    │                   ├── AccountResourceTest.class
+    │                   ├── AuthorResourceTest.class
+    │                   ├── BookResourceTest.class
+    │                   ├── TestUtil.class
+    │                   └── UserResourceTest.class
+    ├── config
+    │   └── application.yml
+    └── logback-test.xml
+
+226 directories, 1798 files
